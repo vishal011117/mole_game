@@ -1,0 +1,150 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	text-align: center;
+	background: #a2acfb;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	min-height: 100vh;
+}
+
+h1 {
+  background: #de5b31;
+  color: #fff;
+  width: 100%;
+  margin: 0px auto 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 5px #666;
+}
+
+.score {
+  font-size: 3em;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  margin-left: 200px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.time {
+  display: inline-block;
+  font-size: 3em;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.game {
+	text-align: center;
+	width: 600px;
+	height: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+
+.hole {
+	flex: 1 0 33.33%;
+	overflow: hidden;
+	position: relative; 
+}
+
+.hole:after {
+	position: absolute;
+	content: '';
+	background: url('pipe.jpg') bottom center no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 90px;
+	z-index: 2;
+	bottom: -30px;
+	left: 0;
+}
+
+.mole {
+	background: url('mario.png') bottom center no-repeat;
+	background-size: 60%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	transition: all 0.4s;
+}
+
+.hole.up .mole {
+	top: 0;
+}
+
+button {
+	background: transparent;
+  font-size: 1.5em;
+  color: #fff;
+  margin-top: 30px;
+  padding: 2px 30px;
+  border-radius: 5px;
+}
+.hide {
+	display: none;
+}
+
+@media (min-width: 551px) and (max-width: 900px) {
+	h1 {
+		font-size: 1.3em;
+    padding: 5px;
+	}
+	.time, .score {
+		font-size: 1.2em;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+	}
+	.score {
+		line-height: 50px;
+	}
+	.game {
+    width: 300px;
+    height: 230px;
+	}
+	.hole:after {
+    height: 70px;
+	}
+	.startButton {
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 1px 10px;
+    border-radius: 5px;
+	}	
+}
+
+@media (max-width: 550px) {
+	h1 {
+    font-size: 1.2em;
+	}
+	.time, .score {
+    font-size: 1.2em;
+    width: 60px;
+    height: 60px;
+    line-height: 50px;
+	}
+	.score {
+		line-height: 60px;
+	}
+	.game {
+		width: 100%;
+	}
+	button {
+		font-size: 1.3em
+	}
+}
