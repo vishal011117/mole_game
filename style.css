@@ -94,6 +94,7 @@ button {
   margin-top: 30px;
   padding: 2px 30px;
   border-radius: 5px;
+  background: #408e0f;
 }
 .hide {
 	display: none;
